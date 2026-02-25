@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>X7 - PL Painter</title>
+  <link rel="stylesheet" href="X7.css" />
+</head>
+<body>
+
+  <h2>P L &nbsp; P A I N T E R</h2>
+
+  <div class="editor">
+
+    <!-- Color Palette (left of canvas) -->
+    <div id="colorPalette" class="palette hidden">
+      <div class="color" style="background-color: black;"   data-color="black"></div>
+      <div class="color" style="background-color: red;"     data-color="red"></div>
+      <div class="color" style="background-color: blue;"    data-color="blue"></div>
+      <div class="color" style="background-color: green;"   data-color="green"></div>
+      <div class="color" style="background-color: yellow;"  data-color="yellow"></div>
+      <div class="color" style="background-color: orange;"  data-color="orange"></div>
+      <div class="color" style="background-color: purple;"  data-color="purple"></div>
+      <div class="color" style="background-color: pink;"    data-color="pink"></div>
+      <div class="color" style="background-color: white; border-color: #999;" data-color="white"></div>
+    </div>
+
+    <!-- Canvas -->
+    <canvas id="canvas"></canvas>
+
+  </div>
+
+  <!-- Toolbar -->
+  <div class="toolbar">
+    <select id="tool">
+      <option value="brush">Brush</option>
+      <option value="eraser">Eraser</option>
+      <option value="fill">Fill Bucket</option>
+    </select>
+
+    <select id="brushSize">
+      <option value="3">Small</option>
+      <option value="8" selected>Medium</option>
+      <option value="16">Large</option>
+      <option value="28">XL</option>
+    </select>
+
+    <button id="clearBtn">Clear</button>
+    <button id="saveBtn">Save</button>
+  </div>
+
+  <!-- Current color indicator -->
+  <div class="status-bar">
+    <span>Color:</span>
+    <div id="activeColorSwatch" class="active-swatch"></div>
+    <span id="activeColorLabel">black</span>
+  </div>
+
+  <script src="X7.js"></script>
+</body>
+</html>
